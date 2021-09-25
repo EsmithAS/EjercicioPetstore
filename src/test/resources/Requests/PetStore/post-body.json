@@ -1,0 +1,18 @@
+{
+  "id": 0,
+  "category": {
+    "id": 0,
+    "name": "cat"
+  },
+  "name": "Michi",
+  "photoUrls": [
+    "https://images.pexels.com/photos/982865/pexels-photo-982865.jpeg?cs=srgb&dl=pexels-alena-koval-982865.jpg&fm=jpg"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "cat"
+    }
+  ],
+  "status": "available"
+}
