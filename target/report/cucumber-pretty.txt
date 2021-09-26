@@ -1,0 +1,24 @@
+
+@ServicioPetstore @POST
+Scenario: Petición para agregar una mascota                                      [90m# src/test/resources/features/ServicioPetstore.feature:8[0m
+  [32mGiven [0m[32mque configuro las cabeceras[0m                                              [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.queConfiguroLasCabeceras(io.cucumber.datatable.DataTable)[0m
+  [32mAnd [0m[32menvio los datos que se crearan del archivo [0m[32m[1m"PetStore/post-body.json"[0m       [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.envioLosDatosQueSeCrearanDelArchivo(java.lang.String)[0m
+  [32mWhen [0m[32mejecuto el servicio para agregar mascota[0m                                  [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.ejecutoElServicioParaAgregarMascota(io.cucumber.datatable.DataTable)[0m
+  [32mThen [0m[32mvalido el codigo de respuesta sea [0m[32m[1m"200"[0m                                   [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElCodigoDeRespuestaSea(java.lang.String)[0m
+  [32mAnd [0m[32mvalido el esquema de respuesta sea igual al de [0m[32m[1m"PetStore/post-schema.json"[0m [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElEsquemaDeRespuestaSeaIgualAlDe(java.lang.String)[0m
+
+@ServicioPetstore @GET
+Scenario: Petición para obtener una mascota existente                           [90m# src/test/resources/features/ServicioPetstore.feature:20[0m
+  [32mGiven [0m[32mque configuro las cabeceras[0m                                             [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.queConfiguroLasCabeceras(io.cucumber.datatable.DataTable)[0m
+  [32mAnd [0m[32menvio el id de la mascosta existente [0m[32m[1m"2"[0m                                  [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.envioElIdDeLaMascostaExistente(java.lang.String)[0m
+  [32mWhen [0m[32mejecuto el servicio para obtener mascota[0m                                 [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.ejecutoElServicioParaObtenerMascota(io.cucumber.datatable.DataTable)[0m
+  [32mThen [0m[32mvalido el codigo de respuesta sea [0m[32m[1m"200"[0m                                  [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElCodigoDeRespuestaSea(java.lang.String)[0m
+  [32mAnd [0m[32mvalido el esquema de respuesta sea igual al de [0m[32m[1m"PetStore/get-schema.json"[0m [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElEsquemaDeRespuestaSeaIgualAlDe(java.lang.String)[0m
+
+@ServicioPetstore @PUT
+Scenario: Petición para modificar una mascota                                   [90m# src/test/resources/features/ServicioPetstore.feature:32[0m
+  [32mGiven [0m[32mque configuro las cabeceras[0m                                             [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.queConfiguroLasCabeceras(io.cucumber.datatable.DataTable)[0m
+  [32mAnd [0m[32menvio los datos que se modificaran del archivo [0m[32m[1m"PetStore/put-body.json"[0m   [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.envioLosDatosQueSeModificaranDelArchivo(java.lang.String)[0m
+  [32mWhen [0m[32mejecuto el servicio para modificar mascota[0m                               [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.ejecutoElServicioParaModificarMascota(io.cucumber.datatable.DataTable)[0m
+  [32mThen [0m[32mvalido el codigo de respuesta sea [0m[32m[1m"200"[0m                                  [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElCodigoDeRespuestaSea(java.lang.String)[0m
+  [32mAnd [0m[32mvalido el esquema de respuesta sea igual al de [0m[32m[1m"PetStore/put-schema.json"[0m [90m# com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElEsquemaDeRespuestaSeaIgualAlDe(java.lang.String)[0m

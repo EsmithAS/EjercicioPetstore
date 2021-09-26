@@ -6,13 +6,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:target/build/cucumber-html-report",
-                "pretty:target/build/cucumber-pretty.txt",
-                "json:target/build/cucumber.json"
+        plugin = {"html:target/report/cucumber-html-report.html",
+                "pretty:target/report/cucumber-pretty.txt",
+                "json:target/report/cucumber.json"
         },
         features = {"src/test/resources/features"},
         glue = {"com.bdd"},
-        tags = "@PUT"
+        tags = "@ServicioPetstore"
 )
 public class RunnerTest {
 }

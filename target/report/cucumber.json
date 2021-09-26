@@ -1,0 +1,418 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-26T02:30:18.646Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.Before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Petición para agregar una mascota",
+        "description": "",
+        "id": "funcionalidad-servicio-petstore;petición-para-agregar-una-mascota",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "que configuro las cabeceras",
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.queConfiguroLasCabeceras(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "header",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "Content-Type",
+                  "application/json"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16223000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "envio los datos que se crearan del archivo \"PetStore/post-body.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PetStore/post-body.json\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.envioLosDatosQueSeCrearanDelArchivo(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2228194300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "ejecuto el servicio para agregar mascota",
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.ejecutoElServicioParaAgregarMascota(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "url",
+                  "method"
+                ]
+              },
+              {
+                "cells": [
+                  "https://petstore.swagger.io/v2/pet/",
+                  "POST"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "valido el codigo de respuesta sea \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElCodigoDeRespuestaSea(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 301168900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "valido el esquema de respuesta sea igual al de \"PetStore/post-schema.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PetStore/post-schema.json\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElEsquemaDeRespuestaSeaIgualAlDe(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ServicioPetstore"
+          },
+          {
+            "name": "@POST"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-09-26T02:30:21.262Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.Before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Petición para obtener una mascota existente",
+        "description": "",
+        "id": "funcionalidad-servicio-petstore;petición-para-obtener-una-mascota-existente",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "que configuro las cabeceras",
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.queConfiguroLasCabeceras(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "header",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "Content-Type",
+                  "application/json"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "envio el id de la mascosta existente \"2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.envioElIdDeLaMascostaExistente(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 870000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "ejecuto el servicio para obtener mascota",
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.ejecutoElServicioParaObtenerMascota(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "url",
+                  "method"
+                ]
+              },
+              {
+                "cells": [
+                  "https://petstore.swagger.io/v2/pet/",
+                  "GET"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "valido el codigo de respuesta sea \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElCodigoDeRespuestaSea(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15624000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "valido el esquema de respuesta sea igual al de \"PetStore/get-schema.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PetStore/get-schema.json\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElEsquemaDeRespuestaSeaIgualAlDe(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ServicioPetstore"
+          },
+          {
+            "name": "@GET"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-09-26T02:30:22.148Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.Before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Petición para modificar una mascota",
+        "description": "",
+        "id": "funcionalidad-servicio-petstore;petición-para-modificar-una-mascota",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "que configuro las cabeceras",
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.queConfiguroLasCabeceras(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "header",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "Content-Type",
+                  "application/json"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "envio los datos que se modificaran del archivo \"PetStore/put-body.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PetStore/put-body.json\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.envioLosDatosQueSeModificaranDelArchivo(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 810989000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "ejecuto el servicio para modificar mascota",
+            "match": {
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.ejecutoElServicioParaModificarMascota(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "url",
+                  "method"
+                ]
+              },
+              {
+                "cells": [
+                  "https://petstore.swagger.io/v2/pet/",
+                  "POST"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "valido el codigo de respuesta sea \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElCodigoDeRespuestaSea(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "valido el esquema de respuesta sea igual al de \"PetStore/put-schema.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PetStore/put-schema.json\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.bdd.api.stepDefinition.ServicioPetstoreStepDefinition.validoElEsquemaDeRespuestaSeaIgualAlDe(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ServicioPetstore"
+          },
+          {
+            "name": "@PUT"
+          }
+        ]
+      }
+    ],
+    "name": "Funcionalidad servicio Petstore",
+    "description": "  Como QA automation\n  Quiero automatizar los test del servicio Petstore\n  Para poder validar su correcto funcionamiento",
+    "id": "funcionalidad-servicio-petstore",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/ServicioPetstore.feature",
+    "tags": [
+      {
+        "name": "@ServicioPetstore",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
