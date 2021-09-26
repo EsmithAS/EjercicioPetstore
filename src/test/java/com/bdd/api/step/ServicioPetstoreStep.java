@@ -15,6 +15,7 @@ public class ServicioPetstoreStep extends ServiceDOM {
     private Headers headers;
     private String body;
     private Response response;
+    private String idMascota;
 
     public void configurarCabeceras(DataTable dt) {
         List<Map<String, String>> list = dt.asMaps(String.class, String.class);
@@ -34,7 +35,7 @@ public class ServicioPetstoreStep extends ServiceDOM {
 
         switch (method.toUpperCase()) {
             case "GET":
-                response = get(headers, url);
+                response = get(headers, url + idMascota);
                 break;
             case "POST":
                 response = post(headers, body, url);
@@ -52,5 +53,9 @@ public class ServicioPetstoreStep extends ServiceDOM {
 
     public void verificarSchema(String path) {
         validarSchema(response , path);
+    }
+
+    public void enviarIdMascota(String id) {
+        idMascota = id;
     }
 }

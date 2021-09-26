@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
         features = {"src/test/resources/features"},
         glue = {"com.bdd"},
-        tags = "@POST"
+        tags = "@PUT"
 )
 public class RunnerTest {
 }

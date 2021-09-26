@@ -58,7 +58,7 @@ public class ServiceDOM {
     protected void validarSchema( Response response , String path ) {
         File schema = new File(System.getProperty("user.dir")+"/src/test/resources/Requests/"+path);
         System.out.println(response.getBody().asString());
-        Assert.assertThat("El schema es diferente" , response.getBody().asString() , JsonSchemaValidator.matchesJsonSchema(schema));
+        Assert.assertThat(response.getBody().asString() , JsonSchemaValidator.matchesJsonSchema(schema));
     }
 
 }

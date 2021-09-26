@@ -44,4 +44,24 @@ public class ServicioPetstoreStepDefinition {
     public void validoElEsquemaDeRespuestaSeaIgualAlDe(String path) {
         servicioPetstoreStep.verificarSchema(path);
     }
+
+    @And("envio el id de la mascosta existente {string}")
+    public void envioElIdDeLaMascostaExistente(String id) {
+        servicioPetstoreStep.enviarIdMascota(id);
+    }
+
+    @When("ejecuto el servicio para obtener mascota")
+    public void ejecutoElServicioParaObtenerMascota(DataTable dt) {
+        servicioPetstoreStep.ejecutarServicio(dt);
+    }
+
+    @When("ejecuto el servicio para modificar mascota")
+    public void ejecutoElServicioParaModificarMascota(DataTable dt) {
+        servicioPetstoreStep.ejecutarServicio(dt);
+    }
+
+    @And("envio los datos que se modificaran del archivo {string}")
+    public void envioLosDatosQueSeModificaranDelArchivo(String ruta) {
+        servicioPetstoreStep.enviarDatos(ruta);
+    }
 }
